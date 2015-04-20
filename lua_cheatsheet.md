@@ -207,7 +207,7 @@ x:move (2, -3)
 
 ##Tables
 
-### Constructors
+### Table Constructors
 ```lua
 t = {} -- creates an empty table and assigns it to t
 t = {"yes", "no", "?"} -- simple array; elements are t[1], t[2], t[3].
@@ -325,7 +325,6 @@ end
 
 squares = {1, 4, 9, 16, 25, 36, 49, 64, 81}
 ```
-
 ## Libraries
 
 ### Global functions
@@ -474,7 +473,7 @@ Captures:
 [ ^set ] any character not in set
 ```
 
-## Regex example
+### Regex example
 ```lua
 string.find("Lua is great!", "is") -- (5, 6)
 string.find("Lua is great!", "%s") -- (4, 4)
@@ -539,6 +538,8 @@ string.format("<%.4s>", "goodbye") <good>
 string.format("%q", [[she said "hi"]]) "she said \"hi\""
 ```
 
+## Metatable
+
 ### Metatable library
 ```lua
 setmetatable (t, mt) -- sets mt as metatable for t, unless t's metatable has a __metatable field, and returns t
@@ -548,7 +549,7 @@ rawset (t, i, v) -- sets t[i] = v on a table without invoking metamethods
 rawequal (t1, t2) -- returns boolean (t1 == t2) without invoking metamethods
 ```
 
-### Metable overridables
+### Metatable keys
 ```lua
 -- sets handler h(a, b) for '+' and for binary '-' __mul, __div sets handler h(a, b) for '*' and for '/'
 __add, __sub
@@ -708,3 +709,11 @@ print(c) -- (30, 21)
 print(a < c) -- true
 print(a == b) -- false
 ```
+
+This cheatsheet has been created from multiple sources:
+- [The Original Lua Cheatsheet](http://thomaslauer.com/download/luarefv51.pdf)
+- [Lua for beginners](http://lua.gts-stolberg.de/en/table.php)
+- [Lua in 15 minutes](http://tylerneylon.com/a/learn-lua/)
+- [Lua tutorials](http://nova-fusion.com/2012/08/27/lua-for-programmers-part-1/)
+- [Lua Reference Manual](http://www.lua.org/manual/5.1/)
+- [Programming Lua First Edition](http://www.lua.org/pil/contents.html)
