@@ -109,16 +109,49 @@ if not aBoolValue then print('twas false') end
 
 ```
 
-### Operators
+### Operators precedence (from higher to lower)
 ```lua
-or
-and
-<     >     <=    >=    ~=    ==
-..
-+     -
-*     /     %
-not   #     - (unary)
 ^
+not  - (unary)
+*   /
++   -
+..
+<   >   <=  >=  ~=  ==
+and
+or
+```
+
+### Logical operators
+```lua
+-- The logical operators are and, or, and not. Like control structures,
+-- all logical operators consider false and nil as false and anything else as true
+
+-- The operator and returns its first argument if it is false; otherwise,
+-- it returns its second argument
+print(4 and 5)         --> 5
+print(nil and 13)      --> nil
+print(false and 13)    --> false
+
+-- The operator or returns its first argument if it is not false;
+-- otherwise, it returns its second argument:
+print(4 or 5)          --> 4
+print(false or 5)      --> 5
+
+-- Both and and or use short-cut evaluation, that is,
+-- they evaluate their second operand only when necessary.
+
+-- Idioms with shortcuts evaluation:
+
+x = x or v -- equivalent to => if not x then x = v end
+
+(a and b) or c -- equivalent to =>  a ? b : c (assuming b is not false)
+a and b or c -- equivalent to =>a ? b : c (assuming b is not false)
+
+-- The operator not always returns true or false
+print(not nil)      --> true
+print(not false)    --> true
+print(not 0)        --> false
+print(not not nil)  --> false
 ```
 
 ### Functions
