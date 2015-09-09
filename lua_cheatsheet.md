@@ -1,6 +1,17 @@
 #Lua Cheatsheet
 
 ## Basic syntax
+### Comments
+```lua
+-- single line comment
+
+--[[ this is a
+multi line
+comment that spans on
+4 lines --]]
+
+```
+
 ### String literal
 ```lua
 s = 'walternate'  -- Immutable strings like Python.
@@ -339,7 +350,7 @@ myTable = {
 result = table.concat(myTable)
 print(result) --> 19iron10clay
 
-result = table.concat(myTable, " space ")  
+result = table.concat(myTable, " space ")
 print(result) --> 19 space iron space 10 space clay
 ```
 
@@ -528,7 +539,7 @@ string.format (s [, args])
 ```
 
 ```
-Formatting directives for string.format: 
+Formatting directives for string.format:
 % [flags] [field_width] [.precision] type
 
 Formatting field types:
@@ -601,7 +612,7 @@ __mod
 -- sets handler h(a) for unary '-' __len sets handler h(a) for the # operator (userdata)
 __unm
 
--- sets handler h(a, b) for '..' 
+-- sets handler h(a, b) for '..'
 __concat
 
 -- sets handler h(a, b) for '==', '~='
