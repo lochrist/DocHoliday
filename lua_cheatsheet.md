@@ -754,6 +754,28 @@ print(a < c) -- true
 print(a == b) -- false
 ```
 
+### Printing the callstack:
+```
+debug.traceback()
+
+Example :
+function a()
+    print(debug.traceback())
+end 
+
+function b()
+    a() 
+end 
+
+Calling the function b would print :
+
+stack traceback:
+    ./test.lua:45: in function 'a'
+    ./test.lua:50: in function 'b'
+    ./test.lua:53: in main chunk
+    [C]: in ?
+```
+
 This cheatsheet has been created from multiple sources:
 - [The Original Lua Cheatsheet](http://thomaslauer.com/download/luarefv51.pdf)
 - [Lua for beginners](http://lua.gts-stolberg.de/en/table.php)
