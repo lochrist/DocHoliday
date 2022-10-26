@@ -1,5 +1,5 @@
 # DocHoliday
-Documentation about Development and especially Unity development.
+Documentation about Software Development and especially Unity Development.
 
 See the [Wiki](https://github.com/lochrist/DocHoliday/wiki).
 
